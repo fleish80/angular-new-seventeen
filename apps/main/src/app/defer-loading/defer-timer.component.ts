@@ -8,13 +8,13 @@ import {delay, of} from "rxjs";
   imports: [AsyncPipe],
   template: `
 
-    @defer (when timer$ | async){
-       Defer
-    } @placeholder {
-        Placeholder
-    } @loading {
-        loading
-    }
+      @defer (when timer$ | async) {
+          Defer
+      } @placeholder {
+          Placeholder
+      } @loading {
+          loading
+      }
   `,
   styles: ``,
 })
