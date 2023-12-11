@@ -29,11 +29,8 @@
           "apps/main/src/styles.scss"
         ],
         "scripts": [],
-        "server": "apps/main/src/main.server.ts",
-        "prerender": true,
-        "ssr": {
-          "entry": "apps/main/server.ts"
-        }
+        "prerender": false
+
       },
       "configurations": {
         "production": {
