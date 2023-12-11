@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {AsyncPipe} from '@angular/common';
-import {delay, of} from "rxjs";
 import {DeferChildComponent} from "./defer-child.component";
 
 @Component({
@@ -9,9 +8,9 @@ import {DeferChildComponent} from "./defer-child.component";
   imports: [AsyncPipe, DeferChildComponent],
   template: `
 
-      @defer (when timer$ | async) {
+      @defer (on timer(1ms)) {
           <df-defer-child/>
-      } @placeholder {
+      } @placeholder (minimum 5s) {
           Placeholder
       } @loading {
           loading
@@ -19,8 +18,7 @@ import {DeferChildComponent} from "./defer-child.component";
   `,
   styles: ``,
 })
-export default class DeferTimerComponent {
+export default class DeferPlaceholderMinimumComponent {
 
-  timer$ = of(true)
-    .pipe(delay(5000));
+
 }

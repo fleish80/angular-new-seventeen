@@ -17,6 +17,8 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
       <mat-toolbar color="accent">
           <a routerLink="defer-timer" routerLinkActive="active" mat-flat-button color="accent">Timer</a>
+          <a routerLink="defer-timer-native" routerLinkActive="active" mat-flat-button color="accent">Timer Native</a>
+          <a routerLink="defer-placeholder-minimum" routerLinkActive="active" mat-flat-button color="accent">Placeholder Minimum</a>
       </mat-toolbar>
       <router-outlet/>
 
