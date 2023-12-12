@@ -19,6 +19,12 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
           <a routerLink="defer-timer" routerLinkActive="active" mat-flat-button color="accent">Timer</a>
           <a routerLink="defer-timer-native" routerLinkActive="active" mat-flat-button color="accent">Timer Native</a>
           <a routerLink="defer-placeholder-minimum" routerLinkActive="active" mat-flat-button color="accent">Placeholder Minimum</a>
+          <a routerLink="defer-interaction" routerLinkActive="active" mat-flat-button color="accent">Interaction</a>
+          <a routerLink="defer-interaction-button" routerLinkActive="active" mat-flat-button color="accent">Interaction Button</a>
+          <a routerLink="defer-hover" routerLinkActive="active" mat-flat-button color="accent">Hover</a>
+          <a routerLink="defer-hover-element" routerLinkActive="active" mat-flat-button color="accent">Hover Element</a>
+          <a routerLink="defer-view-port-timer" routerLinkActive="active" mat-flat-button color="accent">View Port Timer</a>
+          <a routerLink="defer-view-port-element" routerLinkActive="active" mat-flat-button color="accent">View Port Element</a>
       </mat-toolbar>
       <router-outlet/>
 

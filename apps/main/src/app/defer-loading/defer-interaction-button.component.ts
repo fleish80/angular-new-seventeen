@@ -3,22 +3,22 @@ import {AsyncPipe} from '@angular/common';
 import {DeferChildComponent} from "./defer-child.component";
 
 @Component({
-  selector: 'df-defer-placeholder-minimum',
+  selector: 'df-defer-interaction-button',
   standalone: true,
   imports: [AsyncPipe, DeferChildComponent],
   template: `
 
-      @defer (on timer(1ms)) {
+      <button type="button" #greeting>Hello!</button>
+      @defer (on interaction(greeting)) {
           <df-defer-child/>
-      } @placeholder (minimum 5s) {
-          Placeholder
-      } @loading {
-          loading
+      } @placeholder {
+          <div>Placeholder</div>
       }
+
   `,
   styles: ``,
 })
-export default class DeferPlaceholderMinimumComponent {
+export default class DeferInteractionButtonComponent {
 
 
 }

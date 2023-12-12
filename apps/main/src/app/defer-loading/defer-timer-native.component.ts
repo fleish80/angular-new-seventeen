@@ -3,7 +3,7 @@ import {AsyncPipe} from '@angular/common';
 import {DeferChildComponent} from "./defer-child.component";
 
 @Component({
-  selector: 'df-defer-timer',
+  selector: 'df-defer-timer-native',
   standalone: true,
   imports: [AsyncPipe, DeferChildComponent],
   template: `

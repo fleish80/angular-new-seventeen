@@ -3,22 +3,28 @@ import {AsyncPipe} from '@angular/common';
 import {DeferChildComponent} from "./defer-child.component";
 
 @Component({
-  selector: 'df-defer-placeholder-minimum',
+  selector: 'df-defer-view-port-timer',
   standalone: true,
   imports: [AsyncPipe, DeferChildComponent],
   template: `
 
-      @defer (on timer(1ms)) {
+
+      @defer (on viewport; on timer(10s)) {
           <df-defer-child/>
-      } @placeholder (minimum 5s) {
-          Placeholder
-      } @loading {
-          loading
+      } @placeholder {
+          <div>Placeholder</div>
       }
+
+
   `,
-  styles: ``,
+  styles: `
+
+    .long-div {
+      height: 1000px;
+    }
+  `,
 })
-export default class DeferPlaceholderMinimumComponent {
+export default class DeferViewPortTimerComponent {
 
 
 }
