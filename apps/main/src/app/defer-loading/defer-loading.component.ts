@@ -25,6 +25,8 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
           <a routerLink="defer-hover-element" routerLinkActive="active" mat-flat-button color="accent">Hover Element</a>
           <a routerLink="defer-view-port-timer" routerLinkActive="active" mat-flat-button color="accent">View Port Timer</a>
           <a routerLink="defer-view-port-element" routerLinkActive="active" mat-flat-button color="accent">View Port Element</a>
+          <a routerLink="defer-prefetch" routerLinkActive="active" mat-flat-button color="accent">Prefetch</a>
+          <a routerLink="defer-testing" routerLinkActive="active" mat-flat-button color="accent">Testing</a>
       </mat-toolbar>
       <router-outlet/>
 

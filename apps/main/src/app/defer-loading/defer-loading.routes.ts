@@ -10,5 +10,7 @@ export const deferLoadingRoutes: Route[] = [
   { path: 'defer-hover', loadComponent: () => import('./defer-hover.component') },
   { path: 'defer-hover-element', loadComponent: () => import('./defer-hover-element.component') },
   { path: 'defer-view-port-timer', loadComponent: () => import('./defer-view-port-timer.component') },
-  { path: 'defer-view-port-element', loadComponent: () => import('./defer-view-port-element.component') }
+  { path: 'defer-view-port-element', loadComponent: () => import('./defer-view-port-element.component') },
+  { path: 'defer-prefetch', loadComponent: () => import('./defer-prefetch.component') },
+  { path: 'defer-testing', loadComponent: () => import('./defer-testing.component') }
 ];
