@@ -1,5 +1,5 @@
 import {ComponentFixture, DeferBlockState, TestBed} from '@angular/core/testing';
-import { DeferTestingComponent } from './defer-testing.component';
+import DeferTestingComponent from './defer-testing.component';
 
 describe('DeferTestingComponent', () => {
   let component: DeferTestingComponent;
