@@ -3,13 +3,13 @@ import {AsyncPipe} from '@angular/common';
 import {DeferChildComponent} from "./defer-child.component";
 
 @Component({
-  selector: 'df-defer-error',
+  selector: 'df-defer-idle',
   standalone: true,
   imports: [AsyncPipe, DeferChildComponent],
   template: `
 
 <!--      while the component is rendered, set network to offline-->
-      @defer (on timer(15s)) {
+      @defer (on idle) {
           <df-defer-child/>
       } @placeholder {
           Placeholder
@@ -21,7 +21,7 @@ import {DeferChildComponent} from "./defer-child.component";
   `,
   styles: ``,
 })
-export default class DeferErrorComponent {
+export default class DeferIdleComponent {
 
 
 }

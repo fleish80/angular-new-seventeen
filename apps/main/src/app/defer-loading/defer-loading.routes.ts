@@ -13,5 +13,6 @@ export const deferLoadingRoutes: Route[] = [
   { path: 'defer-view-port-element', loadComponent: () => import('./defer-view-port-element.component') },
   { path: 'defer-prefetch', loadComponent: () => import('./defer-prefetch.component') },
   { path: 'defer-testing', loadComponent: () => import('./defer-testing.component') },
-  { path: 'defer-error', loadComponent: () => import('./defer-error.component') }
+  { path: 'defer-loading-error', loadComponent: () => import('./defer-loading-error.component') },
+  { path: 'defer-idle', loadComponent: () => import('./defer-idle.component') }
 ];
