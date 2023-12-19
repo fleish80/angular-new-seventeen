@@ -6,5 +6,10 @@ export const appRoutes: Route[] = [
     path: 'defer-loading',
     loadChildren: () => import('./defer-loading/defer-loading.routes').then(r => r.deferLoadingRoutes),
     loadComponent: () => import('./defer-loading/defer-loading.component')
+  },
+  {
+    path: 'control-flow',
+    loadChildren: () => import('./control-flow/control-flow.routes').then(r => r.controlFlowRoutes),
+    loadComponent: () => import('./control-flow/control-if.component')
   }
 ];
