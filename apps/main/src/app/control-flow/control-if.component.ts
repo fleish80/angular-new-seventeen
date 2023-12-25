@@ -5,7 +5,9 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   standalone: true,
   imports: [],
   template: `<p>control-if works!</p>`,
-  styles: ``,
+  styles: `
+
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ControlIfComponent {}

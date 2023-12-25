@@ -14,12 +14,29 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
     RouterOutlet
   ],
   template: `
-      <mat-toolbar color="accent">
-          <a routerLink="control-if" routerLinkActive="active" mat-flat-button color="accent">Timer</a>
+      <mat-toolbar color="warn">
+          <a routerLink="control-if" routerLinkActive="active" mat-flat-button color="warn">If</a>
       </mat-toolbar>
       <router-outlet/>
 
   `,
-  styles: ``,
+  styles: `
+    :host {
+      display: flex;
+      flex-direction: column;
+    }
+
+      router-outlet {
+        ::ng-deep + * {
+          padding: 20px;
+        }
+      }
+
+      .active {
+        font-weight: bold;
+        font-size: 20px;
+
+      }
+  `,
 })
-export class ControlFlowComponent {}
+export default class ControlFlowComponent {}

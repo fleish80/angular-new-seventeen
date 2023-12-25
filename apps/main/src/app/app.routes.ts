@@ -10,6 +10,6 @@ export const appRoutes: Route[] = [
   {
     path: 'control-flow',
     loadChildren: () => import('./control-flow/control-flow.routes').then(r => r.controlFlowRoutes),
-    loadComponent: () => import('./control-flow/control-if.component')
+    loadComponent: () => import('./control-flow/control-flow.component')
   }
 ];
