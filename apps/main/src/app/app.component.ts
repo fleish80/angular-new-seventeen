@@ -10,7 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
   template: `
       <mat-toolbar color="primary">
           <a routerLink="defer-loading" routerLinkActive="active" mat-flat-button color="primary">Defer Loading</a>
-          <a routerLink="control-if" routerLinkActive="active" mat-flat-button color="primary">Control Flow</a>
+          <a routerLink="control-flow" routerLinkActive="active" mat-flat-button color="primary">Control Flow</a>
       </mat-toolbar>
       <router-outlet/>
   `,

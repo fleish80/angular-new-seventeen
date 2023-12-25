@@ -1,29 +1,29 @@
 import {Component, signal} from '@angular/core';
 import {AsyncPipe} from '@angular/common';
 import {DeferChildComponent} from "./defer-child.component";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {FormsModule} from "@angular/forms";
+
 
 @Component({
   selector: 'df-defer-error',
   standalone: true,
-  imports: [AsyncPipe, DeferChildComponent],
+  imports: [AsyncPipe, DeferChildComponent, MatCheckboxModule, FormsModule],
   template: `
 
-      <div>
-          <input #checkboxDefer type="checkbox" [checked]="isCheckedDefer()" (change)="isCheckedDefer.set(checkboxDefer.checked)" id="checkboxDefer"/>
-          <label for="checkboxDefer">Open the network tab of the browser's developer tools, then check this checkbox to load the component</label>
-      </div>
+      <mat-checkbox class="example-margin" [ngModel]="isCheckedDefer()" (change)="change()" color="primary">Open the network tab of the
+          browser's developer tools, then check this checkbox to load the component
+      </mat-checkbox>
+
       <br>
 
       @defer (when isCheckedDefer()) {
           <df-defer-child/>
-      }
-      @placeholder {
+      } @placeholder {
           <span>Placeholder</span>
-      }
-      @error {
+      } @error {
           <span>Error</span>
-      }
-      @loading(minimum 1s) {
+      } @loading (minimum 1s) {
           <span>Loading...</span>
       }
   `,
@@ -31,5 +31,10 @@ import {DeferChildComponent} from "./defer-child.component";
 })
 export default class DeferLoadingErrorComponent {
   isCheckedDefer = signal(false);
+
+  change() {
+    this.isCheckedDefer.update(value => !value);
+  }
+
 
 }
