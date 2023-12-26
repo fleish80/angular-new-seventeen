@@ -48,7 +48,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
       .active {
         font-weight: bold;
         font-size: 20px;
-
+        text-decoration: underline;
       }
   `,
 })

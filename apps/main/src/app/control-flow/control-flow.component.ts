@@ -16,6 +16,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
   template: `
       <mat-toolbar color="warn">
           <a routerLink="control-if" routerLinkActive="active" mat-flat-button color="warn">If</a>
+          <a routerLink="control-for" routerLinkActive="active" mat-flat-button color="warn">For</a>
       </mat-toolbar>
       <router-outlet/>
 
@@ -35,6 +36,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
       .active {
         font-weight: bold;
         font-size: 20px;
+        text-decoration: underline;
 
       }
   `,
